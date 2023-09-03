@@ -29,13 +29,13 @@ export function getCapitalCities(): string[] {
 }
 
 // 5. Get a list of languages spoken in all countries
-// export function getAllLanguages(): string[] {
-//   const languages: string[] = [];
-//   countries.forEach((country) => {
-//     languages.push(...country.languages);
-//   });
-//   return Array.from(new Set(languages));
-// }
+export function getAllLanguages(): string[] {
+  const languages: string[] = [];
+  countries.forEach((country) => {
+    languages.push(...country.languages);
+  });
+  return Array.from(new Set(languages));
+}
 
 // 6. Get a list of countries in a specific region
 export function getCountriesInRegion(region: string): string[] {

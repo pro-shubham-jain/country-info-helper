@@ -10,7 +10,7 @@ export interface Country {
   area: number;
   region: string;
   subregion: string;
-  languages: Language[];
+  languages: string[];
   currencieCode: string;
   currencies?: Currency[];
   demonym: string;
