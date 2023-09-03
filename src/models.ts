@@ -70,3 +70,15 @@ export interface Maps {
   googleMaps: string;
   openStreetMaps: string;
 }
+
+export interface state {
+  id: string;
+  name: string;
+  country_id: string;
+}
+
+export interface city {
+  state_id: string;
+  id: string;
+  name: string;
+}
