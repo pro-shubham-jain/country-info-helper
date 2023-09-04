@@ -1,17 +1,13 @@
 <h1>Country Info Helper</h1>
   <p>A JavaScript / TypeScript base  library for handling and manipulating country information easily.</p>
 
-  <h2>Installation</h2>
-  <p>You can install the <code>country-info-helper</code> library using npm:</p>
-  <pre><code>npm install country-info-helper</code></pre>
-
 <h2>Installation</h2>
 
 <p>You can install this package using npm or yarn:</p>
 
-<pre><code>npm install world-data-functions
+<pre><code>npm install  @country-info-helper/common
 # or
-yarn add world-data-functions
+yarn add @country-info-helper/common
 </code></pre>
 
 <h2>Usage</h2>
@@ -48,7 +44,7 @@ yarn add world-data-functions
   getCitiesByCountryName,
   getCitiesByAlpha3Code,
   getCitiesByStateName
-} from 'world-data-functions';
+} from '@country-info-helper/common';
 </code></pre>
 
 <h2>Functions and Use Cases</h2>
