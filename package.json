@@ -48,6 +48,14 @@
   ],
   "author": "Shubham Jain",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pro-shubham-jain/country-info-helper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pro-shubham-jain/country-info-helper/issues"
+  },
+  "homepage": "https://github.com/pro-shubham-jain/country-info-helper#readme",
   "devDependencies": {
     "del-cli": "^4.0.1",
     "typescript": "^4.7.4"

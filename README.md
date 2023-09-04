@@ -44,7 +44,7 @@ yarn add @country-info-helper/common
   getCitiesByCountryName,
   getCitiesByAlpha3Code,
   getCitiesByStateName
-} from '@country-info-helper/common';
+} from '@country-info-helper/common/build/src';
 </code></pre>
 
 <h2>Functions and Use Cases</h2>
@@ -307,6 +307,10 @@ console.log(`Cities in the United States: ${cities.join(', ')}`);
 const cities = getCitiesByStateName(stateName);
 console.log(`Cities in California, USA: ${cities.join(', ')}`);
 </code></pre>
+
+<h2>Contribution</h2>
+<p>
+Feel free to send a PR to fix, update or add new entry anytime. For non-minor changes (ex: country: name, language, city, independence date..), please include a source, if possible.</p>
 
 <h2>License</h2>
 <p>This library is licensed under the <a href="LICENSE">MIT License</a>.</p>
