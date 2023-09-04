@@ -1,6 +1,6 @@
 {
   "name": "@country-info-helper/common",
-  "version": "1.0.2",
+  "version": "1.0.1",
   "description": "",
   "main": "./build/index.js",
   "types": "./build/index.d.ts",
@@ -9,7 +9,8 @@
   ],
   "scripts": {
     "clean": "rmdir /s /q build",
-    "build": "npm run clean && tsc",
+    "tsc": "tsc -p tsconfig.json",
+    "build": "npm run  tsc",
     "start": "nodemon src/examples.ts",
     "pub": "git add . && git commit -m \"Updates\" && npm version patch && npm run build && npm publish"
   },
