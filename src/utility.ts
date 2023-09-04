@@ -163,54 +163,48 @@ export function getStatesByCountryCode(countryCode: string): string[] | undefine
   return state.map(e => e.name) || [];
 }
 
-// // 24. Get a list of states for a specific country name
-// function getStatesByCountryName(countryName: string): string[] | undefined {
-//   const country = countries.find((c) => c.countryName === countryName);
-//   return country?.states || [];
-// }
+// 24. Get a list of states for a specific country name
+export function getStatesByCountryName(countryName: string): string[] | undefined {
+  const country = countries.find((c) => c.countryName === countryName);
+  const state = states.filter((c) => Number(c.country_id) === country?.country_id);
+  return state.map(e => e.name) || [];
+}
 
-// // 25. Get a list of states for a specific dialing code
-// function getStatesByDialingCode(dialingCode: string): string[] | undefined {
-//   const country = countries.find((c) => c.callingCodes === dialingCode);
-//   return country?.states || [];
-// }
+// 25. Get a list of states for a specific alpha3 code
+export function getStatesByAlpha3Code(alpha3Code: string): string[] | undefined {
+  const country = countries.find((c) => c.alpha3 === alpha3Code);
+  const state = states.filter((c) => Number(c.country_id) === country?.country_id);
+  return state.map(e => e.name) || [];
+}
 
-// // 26. Get a list of states for a specific alpha3 code
-// function getStatesByAlpha3Code(alpha3Code: string): string[] | undefined {
-//   const country = countries.find((c) => c.alpha3 === alpha3Code);
-//   return country?.states || [];
-// }
+// 26. Get a list of cities for a specific country code
+export function getCitiesByCountryCode(countryCode: string): string[] | undefined {
+  const country = countries.find((c) => c.countryCode === countryCode);
+  const state_ID = states.find((c) => Number(c.country_id) === country?.country_id)?.id;
+  const city = !!state_ID ? cities.filter((c) => Number(state_ID) === country?.country_id) : [];
+  return city?.map((e: any) => e.name) || [];
+}
 
-// // 27. Get a list of cities for a specific country code
-// function getCitiesByCountryCode(countryCode: string): string[] | undefined {
-//   const country = countries.find((c) => c.countryCode === countryCode);
-//   return country?.cities || [];
-// }
+// 28. Get a list of cities for a specific country name
+export function getCitiesByCountryName(countryName: string): string[] | undefined {
+  const country = countries.find((c) => c.countryName === countryName);
+  const state_ID = states.find((c) => Number(c.country_id) === country?.country_id)?.id;
+  const city = !!state_ID ? cities.filter((c) => Number(state_ID) === country?.country_id) : [];
+  return city?.map((e: any) => e.name) || [];
+}
 
-// // 28. Get a list of cities for a specific country name
-// function getCitiesByCountryName(countryName: string): string[] | undefined {
-//   const country = countries.find((c) => c.countryName === countryName);
-//   return country?.cities || [];
-// }
 
-// // 29. Get a list of cities for a specific dialing code
-// function getCitiesByDialingCode(dialingCode: string): string[] | undefined {
-//   const country = countries.find((c) => c.callingCodes === dialingCode);
-//   return country?.cities || [];
-// }
+// 29. Get a list of cities for a specific alpha3 code
+export function getCitiesByAlpha3Code(alpha3Code: string): string[] | undefined {
+  const country = countries.find((c) => c.alpha3 === alpha3Code);
+  const state_ID = states.find((c) => Number(c.country_id) === country?.country_id)?.id;
+  const city = !!state_ID ? cities.filter((c) => Number(state_ID) === country?.country_id) : [];
+  return city?.map((e: any) => e.name) || [];
+}
 
-// // 30. Get a list of cities for a specific alpha3 code
-// function getCitiesByAlpha3Code(alpha3Code: string): string[] | undefined {
-//   const country = countries.find((c) => c.alpha3 === alpha3Code);
-//   return country?.cities || [];
-// }
-
-// // 31. Get a list of cities for a specific state in a country
-// function getCitiesByState(countryCode: string, stateName: string): string[] | undefined {
-//   const country = countries.find((c) => c.countryCode === countryCode);
-//   if (country && country.states) {
-//     const state = country.states.find((s) => s.name === stateName);
-//     return state?.cities || [];
-//   }
-//   return undefined;
-// }
+// 30. Get a list of cities for a specific state in a country
+export function getCitiesByStateName(stateName: string): string[] | undefined {
+  const state_ID = states.find((c) => c.name == stateName)?.id;
+  const city = !!state_ID ? cities.filter((c) => state_ID === c.state_id) : [];
+  return city?.map((e: any) => e.name) || [];
+}
