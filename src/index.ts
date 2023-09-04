@@ -208,35 +208,3 @@ export function getCitiesByStateName(stateName: string): string[] | undefined {
   const city = !!state_ID ? cities.filter((c) => state_ID === c.state_id) : [];
   return city?.map((e: any) => e.name) || [];
 }
-
-export default {
-  getCountOfCountries,
-  getCountryNames,
-  getCountryCodes,
-  getCapitalCities,
-  getAllLanguages,
-  getCountriesInRegion,
-  getFlagUrl,
-  getDialingCode,
-  getCountriesSharingBorders,
-  isCountryLandlocked,
-  getTopLevelDomain,
-  getMapUrls,
-  getCoatOfArmsUrls,
-  getEmoji,
-  getUnicode,
-  getAlpha3Code,
-  getNativeNames,
-  getCountryArea,
-  getNumericCode,
-  getCountryCurrencies,
-  getDialingCodeAndFlagUrl,
-  getAllDialingCodeAndFlagUrl,
-  getStatesByCountryCode,
-  getStatesByCountryName,
-  getStatesByAlpha3Code,
-  getCitiesByCountryCode,
-  getCitiesByCountryName,
-  getCitiesByAlpha3Code,
-  getCitiesByStateName,
-};
