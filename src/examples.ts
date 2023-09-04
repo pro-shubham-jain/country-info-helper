@@ -28,7 +28,7 @@ import {
   getCitiesByCountryName,
   getCitiesByAlpha3Code,
   getCitiesByStateName
-} from './index';
+} from './utility';
 
 const count = getCountOfCountries();
 console.log(`Total countries: ${count}`);
