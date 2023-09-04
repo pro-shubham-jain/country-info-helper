@@ -1,6 +1,6 @@
 {
   "name": "@country-info-helper/common",
-  "version": "1.0.13",
+  "version": "2.0.0",
   "description": "",
   "exports": "./index.js",
   "main": "./build/index.js",
